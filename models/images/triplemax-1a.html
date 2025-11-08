@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стремянки TRIPLE MAX | stremyanka.uz</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <h1>Стремянки TRIPLE MAX</h1>
+  <nav><a href="../catalog.html">← Назад к каталогу</a></nav>
+</header>
+
+<section class="model">
+  <div class="gallery" id="gallery-container"></div>
+</section>
+
+<div id="lightbox" class="lightbox" onclick="closeGallery()">
+  <img id="lightbox-img" src="">
+  <div class="nav-buttons">
+    <button onclick="prevImage(event)">←</button>
+    <button onclick="nextImage(event)">→</button>
+  </div>
+</div>
+
+<script src="../script.js"></script>
+<script>renderGallery('triplemax');</script>
+</body>
+</html>
