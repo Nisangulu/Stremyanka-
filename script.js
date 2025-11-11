@@ -33,8 +33,8 @@ function renderGallery(model) {
   container.innerHTML = '';
 
   for (let i = 1; i <= count; i++) {
-    const imgA = `../images/${model}-${i}a.jpg`;
-    const imgB = `../images/${model}-${i}b.jpg`;
+    const imgA = `images/${model}-${i}a.jpg`;
+    const imgB = `images/${model}-${i}b.jpg`;
 
     const div = document.createElement('div');
     div.className = 'gallery-item';
