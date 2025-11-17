@@ -102,3 +102,122 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.gallery-item {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+/* Лайтбокс фон */
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Картинка */
+#lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+}
+
+/* Кнопки перелистывания */
+#prev, #next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+  font-size: 2.5em;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+#prev:hover, #next:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+#prev { left: 5%; }
+#next { right: 5%; }
+
+
+/* Центрирование страницы контактов */
+
+.contact {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.contact-info {
+  max-width: 600px; /* красивый компактный блок */
+  background: #e5f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+.contact-info h2 {
+  text-align: center;
+  color: #006b75;
+  margin-bottom: 10px;
+}
+
+/* Telegram карточка */
+.contact-card {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.contact-card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.telegram-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00bcd4;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.telegram-btn:hover {
+  background: #0097a7;
+}
+
+/* Текстовые контакты */
+.contact-details p {
+  font-size: 18px;
+  margin: 10px 0;
+}

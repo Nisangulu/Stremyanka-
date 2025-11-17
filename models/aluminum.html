@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Алюминиевые стремянки | stremyanka.uz</title>
   <link rel="stylesheet" href="../style.css">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f5f5f5;
+    }
+    h2 {
+      margin-top: 40px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -15,7 +34,6 @@
 <section class="model">
   <div class="gallery" id="gallery-container"></div>
 </section>
-
 <div id="lightbox" class="lightbox" onclick="closeGallery()">
   <img id="lightbox-img" src="">
   <div class="nav-buttons">
@@ -26,5 +44,12 @@
 
 <script src="../script.js"></script>
 <script>renderGallery('aluminum');</script>
+<!-- Лайтбокс -->
+<div id="lightbox" onclick="closeGallery()">
+  <button id="prev" onclick="prevImage(event)">&#10094;</button>
+  <img id="lightbox-img" src="" alt="Просмотр">
+  <button id="next" onclick="nextImage(event)">&#10095;</button>
+</div>
 </body>
 </html>
+console.log(window.location.pathname);
